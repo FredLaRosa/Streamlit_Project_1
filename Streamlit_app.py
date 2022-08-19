@@ -20,12 +20,12 @@ from PIL import Image                               #
 # ---------------------------------------------------------------------------------------------------- #
 #                                                                                                      #
 billets_final = pd.read_csv(
-    r"C:\Users\ElMeTeOr\Desktop\Data_Anlyst_Projets\P10_La_Rosa_Frédéric\billets_final.csv")
+    r"https://github.com/FredLaRosa/Streamlit_Project_1/blob/main/billets_final.csv")
                                                                                                       
 # Importation du modele de prediction "logit_full_rbs" et de
 # l'objet de preprocessing "rbs"
 logit_full_rbs, rbs = load(
-    r"C:\Users\ElMeTeOr\Desktop\Data_Anlyst_Projets\P10_La_Rosa_Frédéric\predict_nature_billets.joblib")
+    r"https://github.com/FredLaRosa/Streamlit_Project_1/blob/main/predict_nature_billets.joblib")
 ########################################################################################################
 
 
