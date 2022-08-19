@@ -4,9 +4,7 @@
 
 You can access it directly by clicking on the badge below.
 
-```
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://github.com/FredLaRosa/Streamlit_Project_1/blob/main/Streamlit_app.py)
-```
 
 ## Installation
 
