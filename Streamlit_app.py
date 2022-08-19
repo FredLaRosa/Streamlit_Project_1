@@ -48,7 +48,7 @@ loading = st.container()
 #                                                                                                      #
 with image:
     image = Image.open(
-        r"C:\Users\ElMeTeOr\Desktop\Data_Anlyst_Projets\P10_La_Rosa_Frédéric\Logo ONCFM.png")
+        r"Logo ONCFM.png")
     st.image(image, caption="Logo ONCFM")
 
 
