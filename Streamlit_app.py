@@ -25,7 +25,7 @@ billets_final = pd.read_csv(
 # Importation du modele de prediction "logit_full_rbs" et de
 # l'objet de preprocessing "rbs"
 logit_full_rbs, rbs = joblib.load(
-    r"predict_nature_billets.joblib")
+    r"predict_nature_billets.pkl")
 ########################################################################################################
 
 
