@@ -12,6 +12,8 @@ Program for detecting counterfeit banknotes using the geometric data given in a 
 - For the prediction, it's the logistic regression model "logit_full_rbs" -created with Sklearn- which will be used. 
 - A dataframe will be returned as a result. It will include: geometric values; the nature of the banknotes (*True* or *False*) and the probabilities of prediction indicating whether the ticket is *True* and *False*.
 
+The tested banknotes will display in a biplot, showing the rows coordinates (banknotes) and the circle of correlations obtained during the factor analysis of the dataset used to fit our prediction model.
+
 ## Try it :test_tube:
 
 You can download the dataset [billets_production.csv](https://github.com/FredLaRosa/Streamlit_Project_1/blob/main/billets_production.csv) and try it on the data app.
