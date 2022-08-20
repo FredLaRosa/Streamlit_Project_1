@@ -2,11 +2,11 @@
 # Importing functions and/or external classes:      #
 # ------------------------------------------------- #
 #                                                   #
-import streamlit as st                              #
-import pandas as pd                                 #
-from sklearn.preprocessing import RobustScaler      #
-from sklearn.linear_model import LogisticRegression #
-from PIL import Image                               #
+import streamlit as st
+import pandas as pd
+from sklearn.preprocessing import RobustScaler
+from sklearn.linear_model import LogisticRegression
+from PIL import Image
 #                                                   #
 #####################################################
 
