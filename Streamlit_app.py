@@ -255,7 +255,7 @@ et d'insérer votre jeu de donnée en format *csv*.""")
         result["Nature"] = tadam
         result[["Proba Faux", "Proba Vrai"
                   ]] = logit_full_rbs.predict_proba(dataset_rbs).round(2)
-        result["Nature"] = result["Nature"].map({1: "True", 0: "False"})
+        #result["Nature"] = result["Nature"].map({1: "True", 0: "False"})
         #                                                                                 #
         ###################################################################################
 
