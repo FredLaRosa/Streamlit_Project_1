@@ -209,7 +209,15 @@ oscillant entre 98.67% et 100%) la nature de billets de banques.
 Nous avons créé une fonction permettant de retourner, pour tout fichier *.csv* (comme le fichier
 **billets_production.csv** téléchargeable sur le **GitHub** du projet [ici](https://github.com/FredLaRosa/Streamlit_Project_1/blob/main/billets_production.csv)) contenant les données géométriques de billets de banques
 et respectant une certaine nomenclature, un tableau indiquant pour chaque billet, ses dimensions,
-sa nature -*True* pour vrai, *False* pour faux- ainsi que le score de probabilité attestant de sa nature."""
+sa nature -*True* pour vrai, *False* pour faux- ainsi que le score de probabilité attestant de sa nature.
+
+We will display the tested banknotes in a biplot, the latter displaying the rows (banknotes) and the 
+circle of correlations obtained during the factor analysis of the dataset used to fit our prediction model.
+
+The PCA clearly shows us that the nature of the notes is observable on the F1 axis with the variables
+**length** and **low_margin** which are best represented in the circle of correlations. Posts with short
+length (**length**), bottom and top margins (**margin_low** and **margin_up**), and left-right height
+(**height_left** and **height_right** ) larger, are considered false."""
     )
 
 with loading:
