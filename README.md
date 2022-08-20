@@ -4,19 +4,19 @@
 
 ## How it work?
 
-Counterfeit banknote detection program based on its data geometry written in a csv file.
+Program for detecting counterfeit banknotes using the geometric data given in a csv file.
     
 - If an "id" variable is present, its values will be used in index. 
-- The necessary variables are: ["diagonal", "height_left", "height_right", "margin_low", "margin_up", "length"]. 
-- Data will undergo a preprocessing the RobustScaler method used for the feature scaling data when creating our model.
-- For the prediction, it is the logistic regression model "logit_full_rbs", created with sklearn, which will be used. 
-- A dataframe will be returned as a result, it will include: geometric values; the nature of the ticket (True=True, False=False) and the probabilities of prediction indicating whether the ticket is *True* and *False*.
+- The necessary variables to make the prediciton are: ["diagonal", "height_left", "height_right", "margin_low", "margin_up", "length"]. 
+- The data to be predicted will undergo the same pre-processing -using the RobustScaler method from Sklearn- as those used to fit our prediction model.
+- For the prediction, it's the logistic regression model "logit_full_rbs" -created with Sklearn- which will be used. 
+- A dataframe will be returned as a result. It will include: geometric values; the nature of the banknotes (*True* or *False*) and the probabilities of prediction indicating whether the ticket is *True* and *False*.
 
 ## Try it :test_tube:
 
 You can download the dataset [billets_production.csv](https://github.com/FredLaRosa/Streamlit_Project_1/blob/main/billets_production.csv) and try it on the data app.
 
-You can directly to the app data by clicking on the badge below.
+You can access app data directly by clicking on the badge below.
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/FredLaRosa/Streamlit_Project_1/main/Streamlit_app.py)
 
@@ -47,5 +47,5 @@ streamlit run https://github.com/FredLaRosa/Streamlit_Project_1/blob/main/Stream
 ```
 
 ## Documentation
-
+The docstring is written in english.
 This data app is written in french.
