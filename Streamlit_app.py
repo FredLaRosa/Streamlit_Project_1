@@ -9,8 +9,8 @@
 #                                                   #
 import streamlit as st                              #
 import pandas as pd                                 #
-from sklearn.preprocessing import RobustScaler      #
-from sklearn.linear_model import LogisticRegression #
+from sklearn.preprocessing                          #
+from sklearn.linear_mode                            #
 from PIL import Image                               #
 #                                                   #
 #####################################################
@@ -23,7 +23,7 @@ from PIL import Image                               #
 billets_final = pd.read_csv(
     r"billets_final.csv")
                                                                                                       
-rbs = RobustScaler()
+rbs = sklearn.preprocessing.RobustScaler()
 
 billets_rbs = pd.DataFrame(rbs.fit_transform(billets_final.iloc[:,1:7]),
                            index=billets_final.index,
@@ -39,7 +39,7 @@ X_rbs = billets_rbs[[
 ]]
 
 # Ajustement de notre modèle
-logit = LogisticRegression(solver="newton-cg")
+logit = sklearn.linear_mode.LogisticRegression(solver="newton-cg")
 logit_full_rbs = logit.fit(X_rbs, y_rbs)
 ########################################################################################################
 
