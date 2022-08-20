@@ -1,5 +1,5 @@
 #####################################################
-# Importation des fonctions et/ou classes externes: #
+# Importing functions and/or external classes:      #
 # ------------------------------------------------- #
 #                                                   #
 import streamlit as st                              #
@@ -24,7 +24,7 @@ st.markdown(
 
 
 ########################################################################################################
-# Préparation du dataset pour créer le modèle:                                                         #
+# Preparing the dataset to create the model:                                                           #
 # ---------------------------------------------------------------------------------------------------- #
 #                                                                                                      #
 billets_final = pd.read_csv(
@@ -36,23 +36,23 @@ billets_rbs = pd.DataFrame(rbs.fit_transform(billets_final.iloc[:,1:7]),
                            index=billets_final.index,
                            columns=billets_final.iloc[:,1:7].columns)
 
-# Variable dépendante
+# Dependent variable
 y_rbs = billets_final["is_genuine"]
 
-# Variables explicatives quantitatives
+# Quantitative independent variables
 X_rbs = billets_rbs[[
     "diagonal", "height_left", "height_right", "margin_low", "margin_up",
     "length"
 ]]
 
-# Ajustement de notre modèle
+# Fiting our model
 logit = LogisticRegression(solver="newton-cg")
 logit_full_rbs = logit.fit(X_rbs, y_rbs)
 ########################################################################################################
 
 
 ########################################################################################################
-# Création des conteneurs:                                                                             #
+# Building your application structure:                                                                  #
 # -----------------------------------------------------------------------------------------------------#
 #                                                                                                      #
 image = st.container()
@@ -65,7 +65,7 @@ loading = st.container()
 
 
 ########################################################################################################
-# Configuration des conteneurs:                                                                        #
+# Container configuration:                                                                             #
 # -----------------------------------------------------------------------------------------------------#
 #                                                                                                      #
 with image:
@@ -142,16 +142,16 @@ with loading:
             "diagonal", "height_left", "height_right", "margin_low",
             "margin_up", "length"
         ]]
-        # Normalisation des données avec l'objet rbs utilisé pour centrer
-        # les données du modèle logit_full_rbs
+        # Data normalization with rbs object used to center
+        # model data logit_full_rbs
         dataset_rbs = pd.DataFrame(rbs.transform(dataset),
                                    index=dataset.index,
                                    columns=dataset.columns)
 
-        # Application du modèle de régression logistique "logit_full_rbs"
+        # Application of the "logit_full_rbs" logistic regression model
         tadam = logit_full_rbs.predict(dataset_rbs)
 
-        # Création d'un df retournant les résultats de la prédiction
+        # Creation of a dataframe returning the results of the prediction
         resultat = dataset.copy()
         resultat["Nature"] = tadam
         resultat[["Proba Faux", "Proba Vrai"
