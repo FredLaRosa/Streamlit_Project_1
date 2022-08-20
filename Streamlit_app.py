@@ -4,7 +4,8 @@
 #                                                   #
 import streamlit as st                              #
 import pandas as pd                                 #
-from joblib import load                             #
+from sklearn.preprocessing import RobustScaler      #
+from sklearn.linear_model import LogisticRegression #
 from PIL import Image                               #
 #                                                   #
 #####################################################
@@ -29,10 +30,24 @@ st.markdown(
 billets_final = pd.read_csv(
     r"billets_final.csv")
                                                                                                       
-# Importation du modele de prediction "logit_full_rbs" et de
-# l'objet de preprocessing "rbs"
-logit_full_rbs, rbs = load(
-    r"predict_nature_billets.joblib")
+rbs = RobustScaler()
+
+billets_rbs = pd.DataFrame(rbs.fit_transform(billets_final.iloc[:,1:7]),
+                           index=billets_final.index,
+                           columns=billets_final.iloc[:,1:7].columns)
+
+# Variable dépendante
+y_rbs = billets_final["is_genuine"]
+
+# Variables explicatives quantitatives
+X_rbs = billets_rbs[[
+    "diagonal", "height_left", "height_right", "margin_low", "margin_up",
+    "length"
+]]
+
+# Ajustement de notre modèle
+logit = LogisticRegression(solver="newton-cg")
+logit_full_rbs = logit.fit(X_rbs, y_rbs)
 ########################################################################################################
 
 
