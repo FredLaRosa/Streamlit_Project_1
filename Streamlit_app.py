@@ -90,8 +90,6 @@ class HandlerEllipse(HandlerPatch):
         self.update_prop(p, orig_handle, legend)
         p.set_transform(trans)
         return [p]
-
-
 #                                                                                                      #
 ########################################################################################################
 
