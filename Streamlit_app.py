@@ -339,7 +339,7 @@ et d'insérer votre jeu de donnée en format *csv*.""")
         circle = plt.Circle((0, 0),
                             1,
                             facecolor="none",
-                            edgecolor="#fa912e",
+                            edgecolor="#9fc377",
                             linewidth=2,
                             label="Cercle des corrélations")
         # We add our circle to the graph
@@ -364,7 +364,7 @@ et d'insérer votre jeu de donnée en format *csv*.""")
                               fontsize=16)
 
         # Legend of the scatter plot
-        true_patch = mpatches.Patch(color="#9fc377", label="True")
+        true_patch = mpatches.Patch(color="#ff7f0e", label="True")
         false_patch = mpatches.Patch(color="#0272a2", label="False")
         banknotes_tested = mpatches.Patch(color="#ffe66d", label="Billets testés")
 
