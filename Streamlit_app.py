@@ -211,13 +211,15 @@ Nous avons créé une fonction permettant de retourner, pour tout fichier *.csv*
 et respectant une certaine nomenclature, un tableau indiquant pour chaque billet, ses dimensions,
 sa nature -*True* pour vrai, *False* pour faux- ainsi que le score de probabilité attestant de sa nature.
 
-We will display the tested banknotes in a biplot, the latter displaying the rows (banknotes) and the 
-circle of correlations obtained during the factor analysis of the dataset used to fit our prediction model.
+Nous afficherons les billets testés dans un bibplot, ce dernier affichant la projection des individus
+(billets) et du cercle des corrélations obtenu lors de l'analyse factorielle du jeu de donnée ayant servi
+à ajuster notre modèle de prédiction.
 
-The PCA clearly shows us that the nature of the notes is observable on the F1 axis with the variables
-**length** and **low_margin** which are best represented in the circle of correlations. Posts with short
-length (**length**), bottom and top margins (**margin_low** and **margin_up**), and left-right height
-(**height_left** and **height_right** ) larger, are considered false."""
+L'ACP nous montre bien que la nature des billets est observable sur l'axe F1 avec les variables **length**
+et **margin_low** qui en sont les mieux représentées dans le cercle des corrélations. Les billets ayant 
+une petite longueur (**length**), une marge inférieure et supérieure (**margin_low** et **margin_up**), 
+ainsi qu'une hauteur gauche-droite (**height_left** et **height_right**) plus grande, sont considérés
+comme faux."""
     )
 
 with loading:
