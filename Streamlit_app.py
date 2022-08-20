@@ -10,7 +10,7 @@
 import streamlit as st                              #
 import pandas as pd                                 #
 import sklearn.preprocessing 
-import sklearn.linear_mode                          #
+#import sklearn.linear_mode                          #
 from PIL import Image                               #
 #                                                   #
 #####################################################
@@ -39,8 +39,8 @@ X_rbs = billets_rbs[[
 ]]
 
 # Ajustement de notre modèle
-logit = LogisticRegression(solver="newton-cg")
-logit_full_rbs = logit.fit(X_rbs, y_rbs)
+#logit = LogisticRegression(solver="newton-cg")
+#logit_full_rbs = logit.fit(X_rbs, y_rbs)
 ########################################################################################################
 
 
