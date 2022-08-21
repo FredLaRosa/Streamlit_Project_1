@@ -387,7 +387,7 @@ et d'insérer votre jeu de donnée en format *csv*.""")
         st.subheader(
             "Affichage des billets testés sur le biplot des individus et variables"
         )
-        # Display biplot
-        st.pyplot()
         # Disabling warning for calling st.pyplot() without any arguments
         st.set_option("deprecation.showPyplotGlobalUse", False)
+        # Display biplot
+        st.pyplot()
