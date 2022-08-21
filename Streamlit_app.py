@@ -28,6 +28,7 @@ sns.set_style("darkgrid")
 st.set_page_config(page_title="Détecter les faux billets",
                        page_icon=":euro:")
 [theme]
+
 base="light"
 primaryColor="#e63946"
 backgroundColor="#f1faee"
